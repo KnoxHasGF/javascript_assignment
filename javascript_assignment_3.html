@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Filter Example</title>
+</head>
+<body>
+    <h1>Filter Names Starting with a Specific Letter</h1>
+
+    <div id="filteredNames"></div>
+
+    <script>
+        const people = [
+            "Alice Anderson",
+            "Aaron Adams",
+            "Bella Brown",
+            "Brian Black",
+            "Cathy Carter",
+            "Charles Cooper",
+            "Diana Davis",
+            "Daniel Drake",
+            "Ella Evans",
+            "Ethan Edwards",
+            "Fiona Fisher",
+            "Frank Foster",
+            "Grace Green",
+            "Gavin Gray",
+            "Hannah Harris",
+            "Henry Hill",
+            "Isabella Ingram",
+            "Ian Irving",
+            "Jack Johnson",
+            "Julia James"
+        ];
+
+        const chosenLetter = "B"; 
+
+        const result = people.filter(name => name.charAt(0) === chosenLetter);
+
+        const displayDiv = document.getElementById("filteredNames");
+        displayDiv.innerHTML = `<p>${result.join(", ")}</p>`; 
+    </script>
+</body>
+</html>
